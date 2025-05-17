@@ -1,0 +1,125 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #121212, #1f1f47);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container */
+.main-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Stylish Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 234, 0.2);
+    backdrop-filter: blur(15px);
+    position: relative;
+    z-index: 1;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: linear-gradient(45deg, #00f2fe, #4facfe, #00f2fe);
+    z-index: -1;
+    filter: blur(40px);
+    opacity: 0.3;
+    border-radius: 25px;
+}
+
+/* Animation */
+.pop-in {
+    animation: popIn 0.7s ease forwards;
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+@keyframes popIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #00ffe7;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+/* Input + Button */
+form input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #00ffe7;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: #00bfa6;
+}
+
+form button {
+    background-color: #00ffe7;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 0 10px #00ffe7;
+}
+
+form button:hover {
+    background-color: #00c6b1;
+    transform: scale(1.05);
+}
+
+/* Result Display */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc70;
+}

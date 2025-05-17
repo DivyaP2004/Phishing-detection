@@ -1,0 +1,12 @@
+[
+    {
+        "from": "account-security@fakebank.com",
+        "subject": "Important! Verify your account immediately.",
+        "body": "Dear user, we noticed suspicious activity. Please login here: http://phishinglink.com"
+    },
+    {
+        "from": "support@fakemail.com",
+        "subject": "Reset your password now!",
+        "body": "Your account has been compromised. Reset your password at: http://maliciouslink.com"
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+      "threat_type": "phishing",
+      "ioc_type": "url",
+      "ioc_value": "http://badsite.com"
+    },
+    {
+      "threat_type": "malware",
+      "ioc_type": "ip",
+      "ioc_value": "123.45.67.89"
+    }
+  ]
+  

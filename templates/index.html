@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="glass-card pop-in">
+            <h2>🛡️ Phishing Detector</h2>
+            <p class="subtitle">Secure your clicks before they trick you.</p>
+            <form method="POST">
+                <input type="text" name="url_input" placeholder="🔗 Enter a URL or Email..." required>
+                <button type="submit">🚨 Detect Now</button>
+            </form>
+
+            {% if prediction %}
+                <div class="result animate-result">
+                    <p><strong>Input:</strong> {{ user_input }}</p>
+                    <p><strong>Detected as:</strong> {{ input_type }}</p>
+                    <p><strong>{{ input_type }} Detection:</strong> <span>{{ prediction }}</span></p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

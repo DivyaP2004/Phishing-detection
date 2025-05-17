@@ -1,0 +1,3 @@
+threat_type,ioc_type,ioc_value
+phishing,url,http://badsite.com
+malware,ip,123.45.67.89
